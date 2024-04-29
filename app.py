@@ -8,7 +8,7 @@ app.config['REDIS_URL'] = 'redis://redis:6379/0'
 
 redis = FlaskRedis(app)
 
- 
+  
 @app.route('/')
 def counter():
     return '{0} {1}'.format(str(redis.incr('web2_counter')),
